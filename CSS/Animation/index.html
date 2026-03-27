@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bounch Animation</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .box {
+    width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    /* padding: 0 40px; */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bouncex 3s linear infinite, bouncey 1s ease-out infinite alternate;
+  }
+
+  @keyframes bouncex {
+    0% {
+      left: 0%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes bouncey {
+    0% {
+      bottom: 0%;
+    }
+
+    100% {
+      bottom: 100%;
+    }
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="circle"></div>
+  </div>
+
+</body>
+
+</html>
