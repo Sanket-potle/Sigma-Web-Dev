@@ -1,0 +1,1432 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <title>Document</title> -->
+<!-- <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/fonts/fonts.css"> -->
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: #fff;
+    padding-top: 76px;
+  }
+
+  ul,
+  ul li {
+    list-style: none;
+  }
+
+  header .navbar-brand {
+    background: url("https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/logo_black_7ef5f51645.svg") no-repeat 0;
+    background-size: contain;
+  }
+
+  header .navbar-brand {
+    display: block;
+    height: 33px;
+    width: 169px;
+    padding: 0;
+    background-size: contain;
+  }
+
+
+  header .header-top {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: -100px;
+    left: 0;
+    right: 0;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    z-index: 999;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .1);
+  }
+
+  header .header-top {
+    /* padding: 0 13%; */
+  }
+
+  header .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 14px;
+    color: #000;
+    padding: 25px 15px;
+    font-family: ubuntu, sans-serif;
+  }
+
+  .abooutUs-section .abooutUs-section-body-right img {
+    height: 350px;
+    width: 100%;
+  }
+
+  .abooutUs-section-body-right {
+    padding: 0;
+  }
+
+  header .tata-logo {
+    background: url("https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/tata_blue_192c30f5cf.png") no-repeat 50%;
+    height: 45px;
+    width: 100px;
+    background-size: contain;
+    margin-top: -5px;
+    display: block;
+    padding: 40px 30px !important;
+  }
+
+  .navbarSupportedContent .tata-logo-p {
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  .container {
+    max-width: 87%;
+    padding: 0;
+  }
+
+  .btn_1 {
+    background: #ff6000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-family: ubuntu, sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn_1:hover {
+    color: white;
+    background: #f34500;
+    text-decoration: none;
+  }
+
+  .hero-section {
+    background: url("https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Home_Page_Banner_bfa5959db6.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 420px;
+  }
+
+
+  .hero-section .hero-content {
+    padding: 60px 0px;
+  }
+
+
+  .hero-section .hero-content h1 {
+    font-size: 30px;
+    color: #000;
+    font-family: ubuntu, sans-serif;
+    margin-bottom: 20px;
+    font-weight: 600;
+    max-width: 393px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    max-width: 418px;
+    margin-bottom: 25px;
+  }
+
+  .search-filter {
+    background: #002f51;
+    padding: 25px 0;
+  }
+
+  .search-filter .row h2 {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+  }
+
+  .search-filter-row {
+    gap: 20px;
+  }
+
+
+
+  .search-filter-row .right-section input {
+    padding: 13px 35px 13px 13px;
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .search-filter-row .right-section input::placeholder {
+    color: #fff;
+  }
+
+  .search-filter-row .right-section {
+    width: 45%;
+    position: relative;
+
+  }
+
+  .search-filter-row .left-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .searchRole {
+    outline: none;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 14px 12px;
+    position: absolute;
+    top: -4px;
+    right: 2px;
+
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .searchRole svg {
+    width: 19px;
+    height: 19px;
+    fill: #fff;
+  }
+
+  .abooutUs-section-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .search-filter-row .right-section input::placeholder {
+    color: #ffffff !important;
+    /* Replace with your desired color hex */
+    opacity: 1;
+    /* Ensures the color isn't washed out in Firefox */
+  }
+
+  /* For older browser support */
+  .search-filter-row .right-section input::-webkit-input-placeholder {
+    color: #ffffff !important;
+  }
+
+  .search-filter-row .right-section input::-moz-placeholder {
+    color: #ffffff !important;
+  }
+
+  .our-vision-left {
+    background: #ff9f46;
+  }
+
+  .our-vision-right {
+    background: #002f51;
+    ;
+  }
+
+
+
+  .our-vision-left {
+    padding: 60px 71px 60px 6.5%;
+  }
+
+
+  .our-vision-row h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .our-vision-row p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .section-5-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+
+  .section-5 {
+    background-color: #c4c4c4;
+  }
+
+  .h2_font {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .our-vision-right {
+    padding: 52px 6.5% 60px 63px;
+  }
+
+  .abooutUs-section-body-left {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding: 0;
+    padding-right: 50px;
+    gap: 20px;
+  }
+
+  .blue_color {
+    color: #002f51;
+    position: relative;
+  }
+
+  .abooutUs-section-header p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .h2_font::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff6000;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-48%, -100%);
+  }
+
+  .section-5 p {
+    font-size: 19px;
+    font-weight: 400;
+    color: black;
+  }
+
+  .section-5 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .section-5-content p {
+    max-width: 90%;
+    margin: 0;
+  }
+
+  .section-6 {
+    background-color: white;
+  }
+
+  .section-6 p {
+    color: #002f51;
+  }
+
+  .section-7 p {
+    color: #002f51;
+  }
+
+  .light_grey {
+    background-color: #f2f2f2;
+  }
+
+  .abooutUs-section-body-left p {
+    font-size: 19px;
+    margin: 0;
+  }
+
+  .abooutUs-section .abooutUs-section-body {
+    /* height: 100%; */
+  }
+
+  .footer-section {
+    background: #2d2d2d;
+    display: inline-block;
+    padding: 45px 0px;
+    width: 100%;
+  }
+
+  .footer-section .footer-title {
+    line-height: normal !important;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-left: 6px #3c414a solid;
+    padding: 0 0 0 12px;
+    margin-bottom: 25px;
+  }
+
+  .footer-section .center-social a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background: #002f51;
+    margin: 0 30px 0 15px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  #about-us {
+    scroll-margin-top: 65px;
+  }
+
+  main {
+    display: block;
+  }
+
+  .banner-section-aboutUs {
+    background: url("https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Lifeat_TTBS_c6617a907a.jpg") no-repeat;
+    background-size: cover;
+    height: 350px;
+    margin-top: 0;
+  }
+
+  .career-banner-section {
+    background: url(../images/aboutUs-banner.jpg) no-repeat;
+    background-size: cover;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .career-banner-section h1 {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    max-width: 375px;
+  }
+
+  .why-work-us-section {
+    background: #002f51;
+    ;
+  }
+
+  .why-work-us-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-work-us-header h2 {
+    color: #ff6000;
+    margin-bottom: 15px;
+  }
+
+  .why-work-us-header p {
+    color: #ffffff;
+    max-width: 800px;
+  }
+
+  .why-work-us-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+    gap: 25px 140px;
+  }
+
+  .navbar-nav .nav-item .nav-link.active {
+    color: #ff6000;
+    border-bottom: 5px solid #ff6000;
+  }
+
+  .why-work-us-body .why-work-us-body-item {
+    display: flex;
+    /* align-items: center; */
+  }
+
+  .why-work-us-body .why-work-us-body-item p {
+    color: white;
+    margin: 0;
+  }
+
+  .why-work-us-body .why-work-us-body-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  .why-work-us-footer {
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .why-work-us-footer p {
+    color: white;
+  }
+
+  .video-section-header {
+    text-align: center;
+  }
+
+  .video-section-header {
+    margin-bottom: 25px;
+  }
+
+  .navbarSupportedContent .navbar-nav {
+    gap: 30px;
+  }
+
+
+  .video-section-header h2 {
+    color: black;
+  }
+
+  .career-banner-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #002f51f7;
+    width: 40%;
+    height: 100%;
+  }
+
+  .career-banner-section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40%;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgb(0 47 81) 0%, rgb(0 47 81 / 66%) 35%, rgba(0, 47, 81, 0.55) 55%, rgb(0 47 81 / 51%) 40%, rgb(0 47 81 / 0%) 100%);
+    height: 100%;
+  }
+
+  .search-job-filter .container .row {
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+  }
+
+  .search-job-filter {
+    background-color: #f47021;
+  }
+
+  .search-job-filter .container .row .col-4 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 30px !important;
+  }
+
+  .search-job-filter .container .row .col-4 label {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .search-job-filter .container .row .col-4 input {
+    padding: 6px 35px 6px 13px;
+    width: 100%;
+    outline: none;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+  }
+
+  .search-job-filter .container .row .col-2 button {
+    border-radius: 5px;
+    background-color: #282828;
+    font-weight: 500;
+  }
+
+  .search-job-filter .container .row .col-2 {
+    display: flex;
+    justify-content: end;
+  }
+
+  .jobs-list-section-header {
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jobs-list-section-header-left h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .jobs-list-section-header-right button {
+    background: #ffffff;
+    color: #002f51f7;
+    padding: 5px 35px 5px 12px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #c2cdd5;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 13px;
+  }
+
+  .jobs-list-section-header-right button:after {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+
+    background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'>\<path fill='%23002f51f7' d='M160 352C147.1 352 135.4 359.8 130.4 371.8C125.4 383.8 128.2 397.5 137.4 406.6L297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C511.9 397.4 514.6 383.7 509.6 371.7C504.6 359.7 492.9 352 480 352L160 352z'/>\</svg>");
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3px;
+    right: 12px;
+  }
+
+  @media screen and (max-width:768px) {
+    .jobs-list-section-header-right button:after {
+
+      top: 0px;
+      right: 10px;
+    }
+  }
+
+  .jobs-list-section-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .jobs-list-section-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    gap: 35px;
+  }
+
+  .jobs-list-section-body-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #f47021;
+    padding-bottom: 13px;
+    align-items: center;
+  }
+
+  .jobs-list-section-body-item-left p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+
+  .jobs-list-section-body-item-left h3 {
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .jobs-list-section-body-item-right button {
+    background: #ffffff;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    font-size: 14px;
+    font-family: ubuntu, sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .jobs-list-section-body-item-right button svg {
+    fill: #002f51f7;
+  }
+
+  .jobs-list-section-body-item-right button.favourates_btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .jobs-list-section-body-item-right button.view_details svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .copyright {
+    background: #002f51;
+    padding: 20px 0px;
+  }
+
+  .copyright p,
+  .copyright p a {
+    color: #fff;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .copyright p span.arrow {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    display: inline-block;
+  }
+
+  .copyright p span.arrow:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 9px solid #ff9f46;
+    display: block;
+  }
+
+  .add {
+    padding-left: 50px;
+  }
+
+  .add p {
+    position: relative;
+    font-size: 11px !important;
+  }
+
+  .add p::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -12px;
+    top: 7px;
+  }
+
+  /* Mobile Responsive Styles */
+
+  /* Navbar toggler styles */
+  .navbar-toggler {
+    border: none;
+    padding: 5px;
+    display: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23002f51' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 28px;
+    height: 28px;
+  }
+
+  .video-section h2 {
+    font-size: 1.4em;
+  }
+
+  /* Tablet Styles (max-width: 991px) */
+  @media (max-width: 991px) {
+    body {
+      padding-top: 70px;
+    }
+
+    .navbar-toggler {
+      display: block;
+    }
+
+    header .navbar {
+      padding: 18px 0 !important;
+    }
+
+    .navbar-collapse {
+      display: none !important;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .navbar-collapse.show {
+      display: flex !important;
+    }
+
+    .navbarSupportedContent .navbar-nav {
+      flex-direction: column;
+      gap: 0;
+      width: 100%;
+    }
+
+    header .navbar-expand-lg .navbar-nav .nav-link {
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .navbarSupportedContent .tata-logo-p {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+
+    header .tata-logo {
+      padding: 20px 30px !important;
+    }
+
+    .hero-section {
+      height: auto;
+      min-height: 350px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-section .hero-content {
+      padding: 40px 0;
+    }
+
+    .hero-section .hero-content h1 {
+      font-size: 26px;
+      max-width: 100%;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      max-width: 100%;
+    }
+
+    .search-filter-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .search-filter-row .right-section {
+      width: 100%;
+    }
+
+    .search-filter-row .left-section {
+      justify-content: center;
+    }
+
+    .abooutUs-section-body {
+      flex-direction: column;
+    }
+
+    .abooutUs-section-body-left {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+
+    .abooutUs-section .abooutUs-section-body-right img {
+      height: auto;
+    }
+
+    .our-vision-row {
+      flex-direction: column;
+    }
+
+    .our-vision-left,
+    .our-vision-right {
+      padding: 40px 6.5%;
+    }
+
+    .section-5-content p {
+      max-width: 100%;
+    }
+
+    .footer-section .center-social a {
+      margin: 0 10px;
+    }
+
+    .why-work-us-body {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .career-banner-section:before {
+      width: 100%;
+    }
+
+    .career-banner-section:after {
+      display: none;
+    }
+
+    .career-banner-section h1 {
+      max-width: 100%;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .career-banner-section {
+      height: auto;
+      min-height: 250px;
+    }
+
+    .search-job-filter .container .row {
+      flex-wrap: wrap;
+    }
+
+    .search-job-filter .container .row .col-4 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .search-job-filter .container .row .col-2 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+
+    .video-section-body iframe {
+      height: 400px;
+    }
+
+    .banner-section-aboutUs {
+      height: 280px;
+    }
+  }
+
+  /* Mobile Styles (max-width: 767px) */
+  @media (max-width: 767px) {
+    body {
+      padding-top: 60px;
+    }
+
+    .container {
+      max-width: 95%;
+    }
+
+    header .navbar-brand {
+      height: 28px;
+      width: 145px;
+    }
+
+    header .navbar {
+      padding: 15px 0 !important;
+    }
+
+    .banner-section-aboutUs {
+      height: 250px;
+    }
+
+    .hero-section {
+      min-height: 300px;
+    }
+
+    .hero-section .hero-content {
+      padding: 30px 0;
+    }
+
+    .hero-section .hero-content h1 {
+      font-size: 22px;
+    }
+
+    .hero-description {
+      font-size: 16px;
+    }
+
+    .search-filter {
+      padding: 20px 0;
+    }
+
+    .search-filter .row h2 {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .section-padding {
+      padding: 40px 0;
+    }
+
+    .h2_font {
+      font-size: 26px;
+    }
+
+    .abooutUs-section-header p {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .abooutUs-section-body-left p {
+      font-size: 16px;
+    }
+
+    .our-vision-row h2 {
+      font-size: 24px;
+    }
+
+    .our-vision-row p {
+      font-size: 16px;
+    }
+
+    .section-5 h2 {
+      font-size: 24px;
+    }
+
+    .section-5 p {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    .footer-section {
+      padding: 30px 0;
+    }
+
+    .footer-section .footer-title {
+      font-size: 18px;
+      text-align: center;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .footer-section .center-social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-section .center-social a {
+      margin: 0;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+    }
+
+    .social-med {
+      text-align: center;
+    }
+
+    .copyright {
+      padding: 15px 0;
+    }
+
+    .copyright p {
+      font-size: 11px;
+    }
+
+    .add {
+      padding-left: 30px;
+    }
+
+    .jobs-list-section-body-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .jobs-list-section-body-item-left h3 {
+      font-size: 18px;
+    }
+
+    .jobs-list-section-header {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .jobs-list-section-header-right {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .jobs-list-section-header-right button {
+      padding: 5px 30px 5px 10px;
+      font-size: 12px;
+    }
+
+    .search-job-filter .container .row {
+      flex-direction: column;
+    }
+
+    .search-job-filter .container .row .col-4,
+    .search-job-filter .container .row .col-2 {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding-right: 0 !important;
+      margin-bottom: 15px;
+    }
+
+    .search-job-filter .container .row .col-2 {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .career-banner-section {
+      height: auto;
+      min-height: 200px;
+      padding: 30px 0;
+    }
+
+    .career-banner-section h1 {
+      font-size: 22px;
+      text-align: center;
+      max-width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .video-section-body iframe {
+      height: 300px;
+    }
+  }
+
+  /* Small Mobile Styles (max-width: 480px) */
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    .hero-section .hero-content h1 {
+      font-size: 20px;
+    }
+
+    .hero-description {
+      font-size: 14px;
+    }
+
+    .btn_1 {
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    .h2_font {
+      font-size: 22px;
+    }
+
+    .abooutUs-section-header p {
+      font-size: 16px;
+    }
+
+    .our-vision-left,
+    .our-vision-right {
+      padding: 30px 15px;
+    }
+
+    .our-vision-row h2 {
+      font-size: 20px;
+    }
+
+    .our-vision-row p {
+      font-size: 14px;
+    }
+
+    .footer-section .center-social a {
+      width: 38px;
+      height: 38px;
+    }
+
+    .why-work-us-body .why-work-us-body-item img {
+      width: 40px;
+      height: 40px;
+      margin-right: 15px;
+    }
+
+    .career-banner-section h1 {
+      font-size: 24px;
+    }
+
+    .jobs-list-section-body-item-left h3 {
+      font-size: 16px;
+    }
+
+    .jobs-list-section-body-item-left p {
+      font-size: 13px;
+    }
+
+    .jobs-list-section-header-left h3 {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .jobs-list-section-header-right button {
+      padding: 4px 25px 4px 8px;
+      font-size: 11px;
+    }
+
+    .search-job-filter .container .row .col-4 label {
+      font-size: 14px;
+    }
+
+    .career-banner-section h1 {
+      font-size: 18px;
+    }
+
+    .video-section-body iframe {
+      height: 250px;
+    }
+  }
+</style>
+
+
+<header>
+  <div class="header-top">
+    <div class="container">
+      <div class="col-12 p-0 mobile-position">
+        <nav class="navbar navbar-expand-lg p-0 navbar-light">
+          <a class="navbar-brand" href="/careers" aria-label="Homepage"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-end navbarSupportedContent" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="/careers" class="nav-link open-dropdown-btn">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link open-dropdown-btn" href="/careers/#about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link open-dropdown-btn active" href="/life-at-ttbs">Life @ TTBS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link open-dropdown-btn"
+                  href="https://fa-evmm-test-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?mode=job-location">
+                  Job Opportunities</a>
+              </li>
+            </ul>
+            <ul class="tata-logo-p">
+              <li class="hiddenMobile no-border-hover">
+                <a class="tata-logo" target="_blank" rel="noopener noreferrer" aria-label="Tata logo"></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="banner-section-aboutUs"></div>
+  <section id="about-us" class="section-padding abooutUs-section">
+    <div class="container">
+      <div class="abooutUs-section-row">
+        <div class="abooutUs-section-header">
+          <h2 class="h2_font blue_color">United by Values. Driven by Purpose.</h2>
+          <p class="blue_color">Life @ TTBS</p>
+        </div>
+        <div class="abooutUs-section-body row m-0">
+          <div class="abooutUs-section-body-left col-lg-7">
+            <p>We are a dynamic, inclusive, and purpose driven organisation fostering a culture of collaboration,
+              integrity, and continuous learning. Our employees are encouraged to take initiative, innovate, and grow
+              through structured development programs and transparent HR policies. </p>
+            <p>Our ethics and POSH frameworks ensure a safe and respectful workplace, while regional engagement and
+              leadership support create a strong sense of belonging. We celebrate our shared cultural diversity and
+              recognize our employees’ impact at various forums. Whether you're just starting out or bringing years of
+              experience, we offer a platform to make a meaningful impact.</p>
+          </div>
+          <div class="abooutUs-section-body-right col-lg-5">
+            <img src="https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Lifeat_TTBS_2_34413c57f6.jpg"
+              alt="About Us Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="why-work-us" class="section-padding why-work-us-section">
+    <div class="container">
+      <div class="why-work-us-header">
+        <h2 class="h2">Why Work With Us</h2>
+        <p>We believe that individuals must thrive, professionally and personally. As part of the globally respected
+          Tata Group, our culture is built on trust, innovation, and a deep commitment to customer success.</p>
+      </div>
+      <div class="why-work-us-body">
+        <div class="why-work-us-body-item">
+          <img src="https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Layer1_7ed5d55414.png"
+            alt="Why Work With Us Image 1" class="img-fluid">
+          <p>Transparent rewards and recognition programs celebrate achievements and inspire excellence.</p>
+        </div>
+        <div class="why-work-us-body-item">
+          <img src="https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Layer4_45e4748195.png"
+            alt="Why Work With Us Image 4" class="img-fluid">
+          <p>Supportive workplace policies and CSR initiatives promote a healthy work–life balance and purpose beyond
+            work.</p>
+        </div>
+        <div class="why-work-us-body-item">
+          <img src="https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Layer2_34cc6e81f6.png"
+            alt="Why Work With Us Image 2" class="img-fluid">
+          <p>We’re passionate about learning and development, providing access to learning platforms and encouraging
+            continuous upskilling.</p>
+        </div>
+        <div class="why-work-us-body-item">
+          <img src="https://s3-ttbs-cms-stage.s3.ap-south-1.amazonaws.com/Layer3_30f0337fe9.png"
+            alt="Why Work With Us Image 3" class="img-fluid">
+          <p>A collaborative environment ensures every idea is heard, integrity is valued, and employees actively shape
+            the digital future of India’s SMEs.</p>
+        </div>
+      </div>
+      <div class="why-work-us-footer">
+        <p>If you’re looking to build a career where your potential meets opportunity, TTBS is the place to be.</p>
+      </div>
+    </div>
+  </section>
+  <section id="video-section" class="section-padding video-section">
+    <div class="container">
+      <div class="video-section-header">
+        <h2 class="h2">Our Chief Human Resources Officer, Mr. Mridul Chandra, share his perspective on building a strong
+          culture in a digital-hybrid world, and how technology can power talent acquisition, engagement, and growth
+        </h2>
+      </div>
+      <div class="video-section-body">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/sbAkxCSuRpg?si=45ZZl8CZxucOSFQn"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="section-paddding footer-section">
+  <div class="container">
+    <div class="col-12 p-0">
+      <div class="social-med">
+        <h3 class="footer-title">Find Us on Social Media</h3>
+        <div class="center-social">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/tatatelebiz/"
+            aria-label="Visit Tata Tele on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" width="24px" id="facebook">
+              <path fill="#fff"
+                d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z">
+              </path>
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer"
+            href="https://www.linkedin.com/company/tata-tele-business-services/"
+            aria-label="Visit Tata Tele on LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.0332 2.47559C4.0332 3.57559 3.3332 4.47559 2.0332 4.47559C0.833203 4.47559 0.0332031 3.57559 0.0332031 2.57559C0.0332031 1.47559 0.833203 0.475586 2.0332 0.475586C3.2332 0.475586 4.0332 1.37559 4.0332 2.47559ZM0.0332031 18.4756H4.0332V5.47559H0.0332031V18.4756ZM13.6332 5.67559C11.5332 5.67559 10.3332 6.87559 9.8332 7.67559H9.7332L9.5332 5.97559H5.9332C5.9332 7.07559 6.0332 8.37559 6.0332 9.87559V18.4756H10.0332V11.3756C10.0332 10.9756 10.0332 10.6756 10.1332 10.3756C10.4332 9.67559 10.9332 8.77559 12.0332 8.77559C13.4332 8.77559 14.0332 9.97559 14.0332 11.5756V18.4756H18.0332V11.0756C18.0332 7.37559 16.1332 5.67559 13.6332 5.67559Z"
+                fill="#F7F7F7"></path>
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/tatatelebiz/"
+            aria-label="Visit Tata Tele on Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision"
+              text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+              clip-rule="evenodd" viewBox="0 0 512 462.799" width="18px">
+              <path fill="#fff" fill-rule="nonzero"
+                d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z">
+              </path>
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/TataTeleBusinessServices/"
+            aria-label="Visit Tata Tele on YouTube">
+            <svg width="20" height="20" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M0.941406 17.7844C0.941406 16.9425 0.988262 15.6795 1.08197 13.9956C1.14445 13.169 1.44072 12.4907 1.97078 11.9607C2.50085 11.4306 3.17893 11.1499 4.00502 11.1187C5.56447 11.0409 7.91108 11.0019 11.0449 11.0019C14.1786 11.0019 16.5253 11.0409 18.0847 11.1187C18.9113 11.1658 19.5896 11.4465 20.1197 11.9607C20.6497 12.4749 20.946 13.1532 21.0085 13.9956C21.0863 15.3989 21.1252 16.6618 21.1252 17.7844C21.1252 18.907 21.0863 20.17 21.0085 21.5732C20.946 22.3998 20.6497 23.0781 20.1197 23.6082C19.5896 24.1382 18.9113 24.4189 18.0847 24.4501C16.5257 24.528 14.1791 24.5669 11.0449 24.5669C7.9106 24.5669 5.56399 24.528 4.00502 24.4501C3.17845 24.4035 2.50037 24.1229 1.97078 23.6082C1.4412 23.0935 1.14493 22.4152 1.08197 21.5732C0.988262 19.8898 0.941406 18.6269 0.941406 17.7844ZM2.50854 14.4872H3.9351V22.1117H5.31481V14.4872H6.7421V13.2005H2.50782V14.4872H2.50854ZM4.02881 0.383789H5.43159L6.3204 3.93903H6.41411L7.25606 0.383789H8.65956L7.58333 3.84532C7.22483 4.98378 7.04558 5.56839 7.04558 5.59915V9.29495H5.66587V5.76278C5.63463 5.5446 5.5957 5.34204 5.54909 5.1551C5.50247 4.96816 5.43231 4.76536 5.3386 4.54671C5.24489 4.32805 5.17473 4.13342 5.12811 3.96282L4.02881 0.383789ZM6.74138 21.0823C6.74138 21.8306 7.02203 22.2047 7.58333 22.2047C8.08264 22.2047 8.5584 21.932 9.01062 21.3865V22.1117H10.2267V15.5397H9.01062V20.5446C8.68287 20.8718 8.44114 21.0355 8.28544 21.0355C8.06678 21.0355 7.95745 20.8874 7.95745 20.5914V15.5397H6.74138V21.0823ZM8.58964 7.63411V4.22016C8.58964 3.69009 8.76096 3.27681 9.10361 2.9803C9.44625 2.68379 9.88285 2.5437 10.4134 2.56004C10.9276 2.56004 11.3486 2.71598 11.6763 3.02787C12.0041 3.33976 12.1603 3.75305 12.1449 4.26774V7.65862C12.1449 8.21992 11.9887 8.65652 11.6763 8.96841C11.364 9.2803 10.9274 9.44369 10.3665 9.45859C9.82109 9.45859 9.39243 9.28726 9.08054 8.94462C8.76865 8.60198 8.60502 8.16538 8.58964 7.63483V7.63411ZM9.85257 7.79775C9.85257 8.15673 10.0239 8.33622 10.3665 8.33622C10.7255 8.33622 10.905 8.14111 10.905 7.75089V4.17258C10.905 4.03226 10.8502 3.91548 10.7407 3.82225C10.6311 3.72902 10.5064 3.68216 10.3665 3.68168C10.2267 3.6812 10.1099 3.72013 10.0162 3.79846C9.92249 3.87679 9.86795 3.99381 9.85257 4.14952V7.79775ZM11.419 22.1117H12.6588V21.6201C12.9707 22.0098 13.3605 22.2047 13.8281 22.2047C14.5609 22.2047 14.9274 21.7215 14.9274 20.755V17.1061C14.9274 15.9994 14.5297 15.446 13.7344 15.446C13.3451 15.446 12.9866 15.6565 12.6588 16.0774V13.2012H11.419V22.111V22.1117ZM12.6588 20.8718V16.7558C12.8304 16.5842 13.002 16.4984 13.1735 16.4984C13.5167 16.4984 13.6882 16.7166 13.6882 17.153V20.6145C13.6882 20.9888 13.54 21.176 13.2435 21.176C13.0253 21.176 12.8304 21.0746 12.6588 20.8718ZM13.1959 8.26558V2.72223H14.412V7.75089C14.412 8.0474 14.5213 8.19566 14.7399 8.19566C14.9423 8.19566 15.1837 8.03178 15.4644 7.70403V2.72295H16.6805V9.29495H15.4644V8.56978C15.0127 9.1157 14.5371 9.38866 14.0378 9.38866C13.4765 9.38866 13.1959 9.0143 13.1959 8.26558ZM15.863 20.2634C15.863 20.856 16.011 21.3471 16.3071 21.7368C16.6031 22.1266 17.0476 22.314 17.6406 22.2991C18.8565 22.2991 19.4644 21.6206 19.4644 20.2634V19.7732H18.2015C18.2015 19.804 18.2094 19.9049 18.2253 20.076C18.2411 20.2471 18.2332 20.3797 18.2015 20.4739C18.1698 20.5681 18.1541 20.6774 18.1546 20.8019C18.1551 20.9264 18.1006 21.0198 17.991 21.0823C17.8814 21.1448 17.7723 21.1681 17.6637 21.1522C17.3052 21.1522 17.126 20.8406 17.126 20.2173V18.9774H19.4644V17.2935C19.4644 16.701 19.3241 16.2331 19.0434 15.89C18.7628 15.5469 18.3185 15.3753 17.7106 15.3753C17.1493 15.3753 16.7047 15.5548 16.377 15.9138C16.0492 16.2728 15.8779 16.7327 15.863 17.2935V20.2634ZM17.126 17.9481V17.2467C17.126 16.7632 17.3052 16.5215 17.6637 16.5215C18.0222 16.5215 18.2015 16.7632 18.2015 17.2467V17.9481H17.126Z"
+                fill="#F7F7F7"></path>
+            </svg>
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/tatatelebiz/"
+            aria-label="Visit Tata Tele on Instagram">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.4307 10.9758C14.4307 10.0382 14.1047 9.23535 13.4527 8.56728C12.8007 7.89921 11.9979 7.56567 11.0442 7.56664C10.0905 7.56761 9.2879 7.9014 8.63637 8.56801C7.98485 9.23462 7.65106 10.0375 7.63501 10.9765C7.61895 11.9156 7.95274 12.7182 8.63637 13.3844C9.32001 14.0505 10.1229 14.3843 11.0449 14.3857C11.967 14.3872 12.7698 14.0534 13.4535 13.3844C14.1371 12.7153 14.4629 11.9125 14.4307 10.9758ZM16.2663 10.9758C16.2663 12.4224 15.7579 13.6622 14.7409 14.6952C13.724 15.7282 12.492 16.2369 11.0449 16.2213C9.59785 16.2058 8.35781 15.6973 7.32482 14.6959C6.29182 13.6945 5.78335 12.4545 5.79941 10.9758C5.81546 9.49712 6.32393 8.25733 7.32482 7.25645C8.3257 6.25557 9.56573 5.7471 11.0449 5.73104C12.5241 5.71498 13.7559 6.22345 14.7402 7.25645C15.7245 8.28945 16.2333 9.52924 16.2663 10.9758ZM17.721 5.51646C17.721 5.84977 17.6017 6.13563 17.3633 6.37405C17.1249 6.61247 16.8308 6.73168 16.4809 6.73168C16.1311 6.73168 15.845 6.61247 15.6226 6.37405C15.4002 6.13563 15.281 5.84952 15.265 5.51573C15.2489 5.18194 15.3681 4.89584 15.6226 4.65742C15.8771 4.419 16.1632 4.29978 16.4809 4.29978C16.7986 4.29978 17.0928 4.419 17.3633 4.65742C17.6339 4.89584 17.7531 5.18194 17.721 5.51573V5.51646ZM11.0449 2.58242H8.61302C8.29529 2.58242 7.86589 2.59848 7.32482 2.63059C6.78375 2.66271 6.33075 2.70261 5.96582 2.75029C5.60088 2.79798 5.28315 2.88531 5.01262 3.01231C4.5674 3.18748 4.1779 3.44171 3.84411 3.77501C3.51032 4.10832 3.24781 4.49806 3.05659 4.94425C2.96122 5.19873 2.88167 5.51671 2.81793 5.89818C2.75418 6.27965 2.7065 6.74068 2.67487 7.28127C2.64325 7.82185 2.63546 8.24225 2.65152 8.54246C2.66757 8.84268 2.66757 9.31174 2.65152 9.94964C2.63546 10.5875 2.63546 10.9294 2.65152 10.9751C2.66757 11.0208 2.66757 11.3626 2.65152 12.0005C2.63546 12.6384 2.63546 13.1073 2.65152 13.407C2.66757 13.7067 2.6756 14.1281 2.6756 14.6711C2.6756 15.2141 2.72329 15.6749 2.81866 16.0535C2.91402 16.432 2.99358 16.75 3.05732 17.0074C3.24806 17.4526 3.51032 17.8419 3.84411 18.1752C4.1779 18.5085 4.56716 18.7629 5.01189 18.9386C5.26637 19.034 5.58434 19.1215 5.96582 19.2013C6.34729 19.2811 6.80029 19.3208 7.32482 19.3203C7.84934 19.3198 8.27874 19.3356 8.61302 19.3678C8.9473 19.3999 9.41611 19.3999 10.0195 19.3678C10.6228 19.3356 10.9646 19.3356 11.0449 19.3678C11.1252 19.3999 11.459 19.3999 12.0463 19.3678C12.6336 19.3356 13.1024 19.3356 13.4527 19.3678C13.8031 19.3999 14.2322 19.3841 14.7402 19.3203C15.2482 19.2566 15.7092 19.2169 16.1233 19.2013C16.5374 19.1858 16.8473 19.0982 17.0531 18.9386C17.4983 18.7639 17.8959 18.5097 18.2457 18.1759C18.5956 17.8421 18.8498 17.4528 19.0084 17.0081C19.1038 16.7532 19.1833 16.4349 19.2471 16.0535C19.3108 15.672 19.3585 15.2112 19.3901 14.6711C19.4218 14.131 19.4296 13.7096 19.4135 13.407C19.3974 13.1043 19.3974 12.6355 19.4135 12.0005C19.4296 11.3656 19.4296 11.0237 19.4135 10.9751C19.3974 10.9264 19.3974 10.5846 19.4135 9.94964C19.4296 9.31466 19.4296 8.84584 19.4135 8.54319C19.3974 8.24055 19.3897 7.81942 19.3901 7.27981C19.3906 6.7402 19.3429 6.27917 19.2471 5.89672C19.1512 5.51427 19.0717 5.1963 19.0084 4.94279C18.8333 4.49758 18.579 4.10832 18.2457 3.77501C17.9124 3.44171 17.5149 3.18723 17.0531 3.01158C16.7986 2.91621 16.4887 2.82863 16.1233 2.74883C15.7579 2.66903 15.2968 2.62962 14.7402 2.63059C14.1836 2.63157 13.7544 2.61575 13.4527 2.58315C13.151 2.55055 12.6822 2.55055 12.0463 2.58315C11.4103 2.61575 11.0765 2.61575 11.0449 2.58315V2.58242ZM21.2498 10.9758C21.2498 13.0107 21.226 14.4174 21.1783 15.1959C21.0985 17.04 20.5501 18.4705 19.5332 19.4875C18.5163 20.5044 17.0935 21.053 15.265 21.1333C14.4704 21.181 13.0637 21.2048 11.0449 21.2048C9.02612 21.2048 7.61919 21.181 6.82413 21.1333C4.98002 21.0379 3.54949 20.4896 2.53255 19.4882C1.51561 18.4868 0.967242 17.0563 0.887444 15.1966C0.83976 14.4171 0.815918 13.0099 0.815918 10.9751C0.815918 8.94024 0.83976 7.53355 0.887444 6.75504C0.966756 4.91092 1.51512 3.48039 2.53255 2.46346C3.54998 1.44652 4.9805 0.897905 6.82413 0.81762C7.60314 0.769936 9.01006 0.746094 11.0449 0.746094C13.0798 0.746094 14.4865 0.769936 15.265 0.81762C17.1091 0.912988 18.5318 1.4616 19.5332 2.46346C20.5346 3.46531 21.0829 4.89584 21.1783 6.75504C21.226 7.53355 21.2498 8.94024 21.2498 10.9751V10.9758Z"
+                fill="#F7F7F7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<section class="copyright">
+  <div class="container">
+    <div class="col-sm-11 col-10 p-0">
+      <p>
+        <span class="arrow"></span>TATA is a registered trademark of Tata Sons Private Limited &nbsp;&nbsp; © 2026
+        Tata Teleservices Limited
+      </p>
+    </div>
+    <div class="col-sm-11 col-10 p-0">
+      <p>
+        <span class="arrow"></span>Tata Teleservices (Maharashtra) Limited (TTML) &amp; Tata Tele NXTGEN Solutions
+        Limited (TTNS) are subsidiary
+        companies of Tata Teleservices Limited (TTSL)
+      </p>
+    </div>
+
+    <div class="col-sm-11 col-10 p-0">
+      <div class="add">
+        <p>Regd. Office TTML: D-26, TTC Industrial Area, MIDC Sanpada, P. O. Turbhe, Navi Mumbai - 400703</p>
+        <p>Regd. Office TTNS: Jeevan Bharati Tower - I, 10<sup>th</sup> Floor, 124 Connaught Circus, New Delhi - 110001
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarSupportedContent');
+
+    if (toggler && navbarCollapse) {
+      toggler.addEventListener('click', function () {
+        navbarCollapse.classList.toggle('show');
+        const expanded = toggler.getAttribute('aria-expanded') === 'true';
+        toggler.setAttribute('aria-expanded', !expanded);
+      });
+
+      // Close menu when clicking a nav link
+      const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          navbarCollapse.classList.remove('show');
+          toggler.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  });
+</script>
