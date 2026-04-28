@@ -21,11 +21,21 @@ a {
   text-decoration: none;
   color: black;
 }
+html {
+  scroll-behavior: smooth;
+}
+main {
+  padding: 0 8px;
+}
 
 #container {
   width: 80vw;
   height: auto;
   margin: 0 auto;
+}
+
+section {
+  padding: 30px 0;
 }
 
 /* Navbar  */
@@ -64,23 +74,23 @@ nav {
 
 .btn-box button a {
   color: #f8f8f8;
-  transition: 0.3s ease;
   display: inline-block;
-  transition: 0.9s ease-out;
+  transition: 0.5s ease;
 }
 .btn-box:hover button {
   background-color: #574640;
 }
 
-.btn-box a:hover {
+.btn-box:hover a {
   color: #f8f8f8;
-  transform: translateY(30px);
+  transform: translateY(40px);
   background-color: #1b0101;
 }
 
 .menu li a {
   font-family: var(--font-one);
   font-size: 17px;
+  font-weight: 600;
 }
 
 .btn-box {
@@ -96,13 +106,52 @@ nav {
   font-family: var(--font-one);
   width: 100%;
   height: 100%;
-  background-color: transparent;
   color: #f8f8f8;
-  transition: 0.5s ease-in;
-  transform: translateY(100px);
+  transition: 0.5s ease;
+  transform: translateY(-30px);
   opacity: 0;
 }
 .btn-box:hover .nav-btn-hover {
-  transform: translateY(0px);
+  transform: translateY(10px);
   opacity: 1;
+}
+
+/* Hero Banner */
+.swiper {
+  width: 100%;
+  height: 80vh;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
 }
